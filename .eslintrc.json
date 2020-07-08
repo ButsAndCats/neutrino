@@ -1,0 +1,69 @@
+{
+  "env":
+  {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:react/recommended"
+    ],
+  "globals":
+  {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions":
+  {
+    "ecmaFeatures":
+    {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+  "settings":
+  {
+    "react":
+    {
+      "version": "detect"
+    },
+    "import/resolver":
+    {
+      "node":
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules":
+  {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "no-console": ["error",
+    {
+      "allow": ["warn", "error"]
+    }],
+    "no-unused-vars": ["off"],
+    "no-undef": ["off"],
+    "react/forbid-prop-types": 0,
+    "react/prop-types": 0,
+    "prefer-destructuring": [
+        "error",
+      {
+        "object": true,
+        "array": false
+      }
+      ],
+    "no-case-declarations": "error",
+    "object-curly-spacing": ["error", "always"]
+  }
+}
